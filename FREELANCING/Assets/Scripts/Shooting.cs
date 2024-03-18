@@ -21,7 +21,6 @@ public class Shooting : MonoBehaviour
     }
     private void Shoot()
     {
-        print("shooooot");
         //shoot out raycast from the gun in the direction of the cam return the information to hit
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hit))
         {
@@ -29,7 +28,6 @@ public class Shooting : MonoBehaviour
             if (hit.transform.GetComponent<Target>())
             {
                 hit.transform.GetComponent<Target>().TakeDamage(50);
-                print("shoot!");
             }
         }
     }
