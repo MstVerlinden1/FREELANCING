@@ -12,23 +12,23 @@ public class InputHandler : MonoBehaviour
     private float lookRotation;
     [SerializeField] private bool grounded;
 
-    //public void OnMove(InputAction.CallbackContext context)
-    //{
-    //    move = context.ReadValue<Vector2>();
-    //}
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        move = context.ReadValue<Vector2>();
+    }
     public void OnLook(InputAction.CallbackContext context)
     {
         look = context.ReadValue<Vector2>();
     }
-    //public void OnJump(InputAction.CallbackContext context)
-    //{
-    //    Jump();
-    //}
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        Jump();
+    }
     private void FixedUpdate()
     {
-        //Move();
+        Move();
     }
-    private void LateUpdate()
+    private void Update()
     {
         Look();
     }
